@@ -32,13 +32,14 @@ public class CharacterController2D : MonoBehaviour
         animator.SetFloat("vertical", vertical);
         animator.SetFloat("speed", motionVector.sqrMagnitude);
 
-        moving = horizontal != 0 && vertical != 0;
+        moving = horizontal != 0 || vertical != 0;
+        animator.SetBool("moving", moving);
 
-        if (horizontal != 0 && vertical != 0)
+        if (horizontal != 0 || vertical != 0)
         {
             lastMotionVector = new Vector2(horizontal, vertical).normalized;
-            animator.SetFloat("lastHorizontalVector", horizontal);
-            animator.SetFloat("lastVerticalVector", vertical);
+            animator.SetFloat("lastHorizontal", horizontal);
+            animator.SetFloat("lastVertical", vertical);
         }
 
 
