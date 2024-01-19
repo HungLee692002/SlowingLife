@@ -47,6 +47,13 @@ public class CharacterController2D : MonoBehaviour
 
     private void Move()
     {
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 3.5f;
+        }else
+        {
+            speed = 2f;
+        }
         rigidbody2d.velocity = motionVector * speed;
     }
 }

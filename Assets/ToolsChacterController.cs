@@ -20,6 +20,7 @@ public class ToolsChacterController : MonoBehaviour
 
     private void Update()
     {
+        //Get mouse input to cut tree
         if(Input.GetMouseButtonDown(0))
         {
             UseTool();
@@ -28,6 +29,7 @@ public class ToolsChacterController : MonoBehaviour
 
     private void UseTool()
     {
+
         Vector2 position = rgby2d.position + characterController2D.lastMotionVector*offsetDistance;
 
         Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
