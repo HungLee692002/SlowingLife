@@ -11,6 +11,7 @@ public class CharacterController2D : MonoBehaviour
     public Vector2 lastMotionVector;
     Animator animator;
     public bool moving;
+    public bool sprinting;
 
 
     // Start is called before the first frame update
@@ -31,6 +32,9 @@ public class CharacterController2D : MonoBehaviour
         animator.SetFloat("horizontal", horizontal);
         animator.SetFloat("vertical", vertical);
         animator.SetFloat("speed", motionVector.sqrMagnitude);
+        sprinting = Input.GetKey(KeyCode.LeftShift);
+        animator.SetBool("sprint", sprinting);
+
 
         moving = horizontal != 0 || vertical != 0;
         animator.SetBool("moving", moving);
@@ -49,7 +53,7 @@ public class CharacterController2D : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 3.5f;
+            speed = 3f;
         }else
         {
             speed = 2f;

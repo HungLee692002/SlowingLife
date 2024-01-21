@@ -7,7 +7,7 @@ public class TreeCutable : ToolHit
 {
     [SerializeField] GameObject pickUpDrop;
     [SerializeField] int dropCount = 5;
-    [SerializeField] float spread = 0.7f;
+    [SerializeField] float spread = 0.75f;
 
     public override void Hit()
     {

@@ -31,6 +31,7 @@ public class ToolsChacterController : MonoBehaviour
     {
 
         Vector2 position = rgby2d.position + characterController2D.lastMotionVector*offsetDistance;
+        position.y -= 0.5f;
 
         Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
 
