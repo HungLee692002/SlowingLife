@@ -5,10 +5,11 @@ using UnityEngine;
 public class PickUpItem : MonoBehaviour
 {
     Transform player;
-    [SerializeField] float speed = 5f;
+    [SerializeField] float speed = 0.01f;
     [SerializeField] float pickUpDistance = 1.5f;
     [SerializeField] float ttl = 10f;
-
+    [SerializeField] Item item;
+    [SerializeField] int count = 1;
     private void Awake()
     {
         player = GameManagement.instance.player.transform;
@@ -34,8 +35,12 @@ public class PickUpItem : MonoBehaviour
         //Move item toward to player
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         //If item is touch player then destroy item
-        if (distance < 0.1f)
+        if (distance < 0.001f)
         {
+            if (GameManagement.instance.itemContainer != null)
+            {
+                GameManagement.instance.itemContainer.Add(item, count);
+            }
             Destroy(gameObject);
         }
     }

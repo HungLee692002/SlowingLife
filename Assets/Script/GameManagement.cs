@@ -13,4 +13,6 @@ public class GameManagement : MonoBehaviour
 
     public GameObject player;
 
+    public ItemContainer itemContainer;
+
 }

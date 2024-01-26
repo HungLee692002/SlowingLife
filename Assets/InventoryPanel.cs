@@ -21,7 +21,11 @@ public class InventoryPanel : MonoBehaviour
         {
             buttonList[i].SetIndex(i);
         }
+    }
 
+    private void OnEnable()
+    {
+        Show();
     }
 
     private void Show()
