@@ -30,7 +30,7 @@ public class DayNightSystem : MonoBehaviour
 
         // Apply the color to the material.
         _light.color = color;
-        Debug.Log(time);
+        //Debug.Log(time);
 
         //UpdateTimeDisplay();
     }

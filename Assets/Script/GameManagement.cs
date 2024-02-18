@@ -15,4 +15,5 @@ public class GameManagement : MonoBehaviour
 
     public ItemContainer itemContainer;
 
+    public ItemDragAndDropController dragAndDropController;
 }

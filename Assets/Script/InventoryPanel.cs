@@ -17,8 +17,9 @@ public class InventoryPanel : MonoBehaviour
 
     private void SetIndex()
     {
-        for(int i = 0; i < itemContainer.slots.Count; i++)
+        for (int i = 0; i < itemContainer.slots.Count; i++)
         {
+            //assign index for each slot in inventory
             buttonList[i].SetIndex(i);
         }
     }
@@ -28,14 +29,17 @@ public class InventoryPanel : MonoBehaviour
         Show();
     }
 
-    private void Show()
+    public void Show()
     {
         for (int i = 0; i < itemContainer.slots.Count; i++)
         {
+            //if slot is null then not display anything
             if (itemContainer.slots[i].item == null)
             {
                 buttonList[i].Clean();
-            }else
+            }
+            //if not display item in that slot
+            else
             {
                 buttonList[i].Set(itemContainer.slots[i]);
             }

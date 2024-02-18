@@ -6,8 +6,13 @@ using UnityEngine;
 public class TreeCutable : ToolHit
 {
     [SerializeField] GameObject pickUpDrop;
-    [SerializeField] int dropCount = 5;
+    [SerializeField] int dropCount ;
     [SerializeField] float spread = 0.75f;
+
+    public void Awake()
+    {
+        dropCount = Random.Range(3, 6);
+    }
 
     public override void Hit()
     {
