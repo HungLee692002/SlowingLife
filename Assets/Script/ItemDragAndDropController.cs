@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,8 +12,12 @@ public class ItemDragAndDropController : MonoBehaviour
     [SerializeField] GameObject itemIcon;
     RectTransform iconTransform;
     Image itemIconImage;
+    Transform player;
 
-
+    private void Awake()
+    {
+        player = GameManagement.instance.player.transform;
+    }
 
     private void Start()
     {
@@ -31,10 +36,12 @@ public class ItemDragAndDropController : MonoBehaviour
             {
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    worldPosition.z = -1;
+                    Vector3 spawnPosition = player.position;
+                    spawnPosition.x += UnityEngine.Random.Range(-3,3);
+                    spawnPosition.y += UnityEngine.Random.Range(-3,3);
+                    spawnPosition.z = -1;
 
-                    ItemSpawnManager.instance.SpawnItem(worldPosition, itemSlot.item, itemSlot.count);
+                    ItemSpawnManager.instance.SpawnItem(spawnPosition, itemSlot.item, itemSlot.count);
 
                     itemSlot.Clear();
                     itemIcon.SetActive(false);

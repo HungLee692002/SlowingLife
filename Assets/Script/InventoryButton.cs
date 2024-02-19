@@ -9,6 +9,8 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
     [SerializeField] Image Icon;
     [SerializeField] Text Text;
 
+    [SerializeField] Image highlightImage;
+
     int myIndex;
 
     public void SetIndex(int index)
@@ -44,10 +46,12 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        ItemContainer inventory = GameManagement.instance.itemContainer;
+        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
+        itemPanel.OnClick(myIndex);
+    }
 
-        GameManagement.instance.dragAndDropController.OnClick(inventory.slots[myIndex]);
-
-        transform.parent.GetComponent<InventoryPanel>().Show();
+    public void HighLight(bool b)
+    {
+        highlightImage.gameObject.SetActive(b);
     }
 }

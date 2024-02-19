@@ -16,6 +16,7 @@ public class ItemSpawnManager : MonoBehaviour
     public void SpawnItem(Vector3 position,Item item,int count)
     {
         GameObject o = Instantiate(pickUpItemPrefab,position,Quaternion.identity);
+        o.transform.localScale *= 1.25f;
         o.GetComponent<PickUpItem>().Set(item,count);
     }
 }
