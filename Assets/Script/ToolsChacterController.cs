@@ -6,11 +6,16 @@ using UnityEngine;
 public class ToolsChacterController : MonoBehaviour
 {
     CharacterController2D characterController2D;
+
     Rigidbody2D rgby2d;
 
     [SerializeField] float offsetDistance = 1f;
+
     [SerializeField] float sizeOfInteractableArea = 1f;
 
+    [SerializeField] MarkerManager markerManager;
+
+    [SerializeField] TileMapReadController tileMapReadController;
 
     private void Awake()
     {
@@ -20,6 +25,8 @@ public class ToolsChacterController : MonoBehaviour
 
     private void Update()
     {
+        Marker();
+
         //Get mouse input to cut tree
         if(Input.GetMouseButtonDown(0))
         {
@@ -27,9 +34,14 @@ public class ToolsChacterController : MonoBehaviour
         }
     }
 
+    private void Marker()
+    {
+        Vector3Int gridPosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
+        markerManager.markedCellPosition = gridPosition;
+    }
+
     private void UseTool()
     {
-
         Vector2 position = rgby2d.position + characterController2D.lastMotionVector*offsetDistance;
         position.y -= 0.5f;
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -40,6 +41,11 @@ public class ItemDragAndDropController : MonoBehaviour
                     spawnPosition.x += UnityEngine.Random.Range(-3,3);
                     spawnPosition.y += UnityEngine.Random.Range(-3,3);
                     spawnPosition.z = -1;
+
+                    Vector3 a =( UnityEngine.Random.insideUnitSphere.normalized * 3) + player.position;
+                    float distance = Vector2.Distance(a, player.position);
+                    Debug.Log(distance);
+
 
                     ItemSpawnManager.instance.SpawnItem(spawnPosition, itemSlot.item, itemSlot.count);
 

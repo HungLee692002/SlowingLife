@@ -1,0 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Tilemaps;
+
+public class TileMapReadController : MonoBehaviour
+{
+    [SerializeField] Tilemap tilemap;
+
+    [SerializeField] List<TitleData> tileDatas;
+
+    Dictionary<TileBase, TitleData> dataFormTiles;
+
+    private void Start()
+    {
+        dataFormTiles = new Dictionary<TileBase, TitleData>();
+
+        foreach(TitleData tileData in tileDatas)
+        {
+            foreach(TileBase tile in tileData.tiles)
+            {
+                dataFormTiles.Add(tile, tileData);
+            }
+        }
+    }
+
+
+    public Vector3Int GetGridPosition(Vector2 position,bool mousePosition)
+    {
+        Vector3 worldPosition;
+
+        if(mousePosition)
+        {
+            worldPosition = Camera.main.ScreenToWorldPoint(position);
+        } else
+        {
+            worldPosition = position;
+        }
+
+        Vector3Int gridPosition = tilemap.WorldToCell(worldPosition);
+
+        return gridPosition;
+    }
+
+    public TileBase GetTileBase(Vector3Int gridPosition)
+    {
+        TileBase tile = tilemap.GetTile(gridPosition);
+
+        return tile;
+    }
+
+    public TitleData GetTitleData(TileBase tileBase)
+    {
+        return dataFormTiles[tileBase];
+    }
+}
