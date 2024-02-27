@@ -10,4 +10,8 @@ public class Item : ScriptableObject
     public bool Stackable;
 
     public Sprite Icon;
+
+    public ToolAction onAction;
+
+    public ToolAction onTileMapAction;
 }

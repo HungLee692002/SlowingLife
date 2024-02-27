@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class ToolsChacterController : MonoBehaviour
 {
@@ -9,52 +10,106 @@ public class ToolsChacterController : MonoBehaviour
 
     Rigidbody2D rgby2d;
 
-    [SerializeField] float offsetDistance = 1f;
+    ToolBarController toolBarController;
 
-    [SerializeField] float sizeOfInteractableArea = 1f;
+    Animator animator;
+
+    [SerializeField] float offsetDistance = 1f;
 
     [SerializeField] MarkerManager markerManager;
 
     [SerializeField] TileMapReadController tileMapReadController;
 
+    [SerializeField] float maxDistance = 1.5f;
+
+    Vector3Int selectedTilePosition;
+
+    bool selectable;
+
     private void Awake()
     {
         characterController2D = GetComponent<CharacterController2D>();
         rgby2d = GetComponent<Rigidbody2D>();
+        toolBarController = GetComponent<ToolBarController>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        SelectedTile();
+        CanSelectCheck();
         Marker();
 
         //Get mouse input to cut tree
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            UseTool();
+            if (UseToolWorld())
+            {
+                return;
+            }
+            UseToolGrid();
         }
+    }
+
+    private void SelectedTile()
+    {
+        selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
     }
 
     private void Marker()
     {
-        Vector3Int gridPosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
-        markerManager.markedCellPosition = gridPosition;
+        markerManager.markedCellPosition = selectedTilePosition;
     }
 
-    private void UseTool()
+    void CanSelectCheck()
     {
-        Vector2 position = rgby2d.position + characterController2D.lastMotionVector*offsetDistance;
+        //get character position
+        Vector2 characterPosition = transform.position;
+
+        //get mouse position
+        Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        //check if mouse is near character
+        selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
+
+        //show or hide marker depend on value above
+        markerManager.Show(selectable);
+    }
+
+    private bool UseToolWorld()
+    {
+        //get offset postion of character where character is facing
+        Vector2 position = rgby2d.position + characterController2D.lastMotionVector * offsetDistance;
         position.y -= 0.5f;
 
-        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
+        Item item = toolBarController.GetItem;
 
-        foreach(Collider2D c in collider2Ds)
+        if (item == null)
         {
-            ToolHit hit = c.GetComponent<ToolHit>();
-            if (hit != null)
-            {
-                hit.Hit();
-                break;
-            }
+            return false;
+        }
+
+        if (item.onAction == null )
+        {
+            return false;
+        }
+
+        bool compltet = item.onAction.OnApply(position);
+
+        return false;
+    }
+
+    private void UseToolGrid()
+    {
+        //check if mouse is near player to select tile
+        if (selectable)
+        {
+            Item item = toolBarController.GetItem;
+            if(item == null) { return; }
+            if (item.onTileMapAction == null) { return; }
+
+            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+
         }
     }
 }

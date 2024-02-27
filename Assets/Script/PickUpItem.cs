@@ -57,7 +57,7 @@ public class PickUpItem : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
 
         //If item is touch player then destroy item
-        if (distance < 0.001f)
+        if (distance < 0.1f)
         {
             if (GameManagement.instance.itemContainer != null)
             {
