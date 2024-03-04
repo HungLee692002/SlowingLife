@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -375,7 +375,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3_plants_12
+      name: seed_stage_1
       rect:
         serializedVersion: 2
         x: 416
@@ -669,7 +669,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 3_plants_26
+      name: seed_stage_2
       rect:
         serializedVersion: 2
         x: 416
@@ -1313,7 +1313,6 @@ TextureImporter:
       3_plants_1: -2095740031
       3_plants_10: -2034951855
       3_plants_11: -761409360
-      3_plants_12: -777589299
       3_plants_14: -933617635
       3_plants_15: 557268706
       3_plants_16: -303592920
@@ -1327,7 +1326,6 @@ TextureImporter:
       3_plants_23: -145235833
       3_plants_24: 1330917425
       3_plants_25: 1094661292
-      3_plants_26: 1424419781
       3_plants_27: 2045536357
       3_plants_29: -558251765
       3_plants_3: 207621157
@@ -1365,6 +1363,8 @@ TextureImporter:
       3_plants_9: 458071983
       bush: -2069205701
       seed: 999559574
+      seed_stage_1: -777589299
+      seed_stage_2: 1424419781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

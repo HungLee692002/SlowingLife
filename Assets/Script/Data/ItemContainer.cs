@@ -23,11 +23,11 @@ public class ItemSlot
         count = 0;
     }
 
-    public void Set(Item item,int count)
+    public void Set(Item item, int count)
     {
         this.item = item;
         this.count = count;
-        
+
     }
 }
 
@@ -68,6 +68,33 @@ public class ItemContainer : ScriptableObject
             {
                 //Add that item to inventory slot
                 itemSlot.item = item;
+            }
+        }
+    }
+
+    public void Remove(Item itemToRemove, int count = 1)
+    {
+        if (itemToRemove.Stackable)
+        {
+            ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
+            if (itemSlot == null) { return; }
+
+            itemSlot.count -= count;
+            if(itemSlot.count <= 0)
+            {
+                itemSlot.Clear();
+            }
+        } else
+        {
+            while(count > 0)
+            {
+                count -=1;
+
+                ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
+                if(itemSlot == null) { break; }
+
+                itemSlot.Clear();
+
             }
         }
     }

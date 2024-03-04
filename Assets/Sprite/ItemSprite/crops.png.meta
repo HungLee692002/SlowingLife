@@ -1,0 +1,1089 @@
+fileFormatVersion: 2
+guid: 39aac499df37bfe48a6e4e48fc1215c2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beet
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 990
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29a06b1bc27a6f4d96fb6f157ac0353
+      internalID: 120887396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 992
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5c529ff34184b43b90e15d808288d0
+      internalID: 589381672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watermelon
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 992
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacc2efa7c2f6a94cb81b6e2d1823e23
+      internalID: 176468452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beet_seed
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 954
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14672b468c35c0941a2a82f66ae5f802
+      internalID: 24403014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion_seed
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 953
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe99e4d2efd9c3f4a9ffa28bd75c502f
+      internalID: 803905722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watermelon_seed
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 957
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af73f264038c55746b74eec368ecc934
+      internalID: 861444794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beet_stage_1
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 891
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc1904fa4b735948a0dc87bbf65158c
+      internalID: 2086017651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion_stage_1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 891
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ed5cadd8058c747926ac3882531648
+      internalID: 1278013672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watermelon_stage_1
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 896
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d096b79afb4bcf74ba10d7baed4f4fff
+      internalID: 122160879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beet_stage_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 830
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ca42e5daee5b2499ff6777d871d4fc
+      internalID: -466014184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion_stage_2
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 830
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da43aeffb81a1c3469500b7518c599dc
+      internalID: -1951150755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watermelon_stage_2
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 832
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b233926c1aa8642b50a1df06a6a06c
+      internalID: 392473955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion_stage_3_1
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 800
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056ba0b0db8389f4aa9d1fe2e7931e2d
+      internalID: 585656953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beet_stage_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 766
+        width: 32
+        height: 40
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95583bd22670a1e4bb7815f4b462e2e4
+      internalID: -1912051125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: onion_stage_3_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 768
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d132df4e8ac2a24b8ec7a09044ba196
+      internalID: 1572927500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watermelon_stage_3
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 768
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f550e22007a69b48a6aa5d60432b80f
+      internalID: 328153232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 668
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7594a5f503733c4c8e7cd6b26840dd4
+      internalID: 761744633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 672
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae25c22f398d36c41bb197451fad8949
+      internalID: -1077349395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage_seed
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 636
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a1751cafcba3547aaf27059d69822b
+      internalID: 285064374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry_seed
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dd6600f32bdd1449e04a37fd0491ff
+      internalID: 438216981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage_sage_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 573
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7487c7e106c7c4e45ac77b967177ec99
+      internalID: -335432891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry_stage_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 576
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c895cde7ed32ef445a7aba6ccfd83dc6
+      internalID: -975899889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage_sage_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 509
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d071f6e2d0deb67428d931ea4962bce5
+      internalID: -1116899382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry_stage_2
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebcc3fcd9daf484b9011f188d951a94
+      internalID: -258381705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage_sage_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 445
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edba3483c7a6104db5d455c345c3896
+      internalID: -796163525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry_stage_3
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dd42a28fa248e4ebd2cc33cd6e3040
+      internalID: 1323107019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage_sage_
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b40deca34e0f69e45bba0de0d688aba5
+      internalID: -808225601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: strawberry_stage_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 384
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c2acf1bdf583d4f98bc114942d0be7
+      internalID: -17618871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      beet: 120887396
+      beet_seed: 24403014
+      beet_stage_1: 2086017651
+      beet_stage_2: -466014184
+      beet_stage_3: -1912051125
+      cabbage: 285064374
+      cabbage_sage_: -808225601
+      cabbage_sage_1: -1116899382
+      cabbage_sage_2: -796163525
+      cabbage_sage_3: -808225601
+      cabbage_seed: -335432891
+      crops_0: -1244608673
+      crops_1: 556560247
+      crops_10: -1996208770
+      crops_100: -591932388
+      crops_101: -1987424264
+      crops_102: -1793878983
+      crops_103: -1111021836
+      crops_104: -564056467
+      crops_105: -605336338
+      crops_106: -1540602950
+      crops_107: -1605374053
+      crops_108: 144875695
+      crops_109: -90555509
+      crops_11: 712711571
+      crops_110: 955352504
+      crops_111: 1456402164
+      crops_113: -640822244
+      crops_114: -21184415
+      crops_115: 890522272
+      crops_116: -679846761
+      crops_117: -1704995258
+      crops_119: -88892129
+      crops_12: -1623591148
+      crops_120: -901191884
+      crops_121: -1174141301
+      crops_122: 1119339916
+      crops_123: 795699197
+      crops_124: -2034745964
+      crops_125: -1631398959
+      crops_127: -375181206
+      crops_128: -541743732
+      crops_129: 122311240
+      crops_13: -1011078750
+      crops_130: -1831208278
+      crops_131: 1266916556
+      crops_132: 1699838113
+      crops_133: -1296912783
+      crops_134: -1661729922
+      crops_135: -1115307577
+      crops_136: -1106003867
+      crops_137: 481513555
+      crops_139: 2090346578
+      crops_14: -646326563
+      crops_140: -345725976
+      crops_141: 912239207
+      crops_142: -582900633
+      crops_143: 1490025795
+      crops_144: -1409670635
+      crops_145: 637504120
+      crops_146: -1794968590
+      crops_147: 1733916610
+      crops_148: -308501431
+      crops_149: -1692227570
+      crops_150: 902783402
+      crops_151: -1534866573
+      crops_152: -207804348
+      crops_153: 254480007
+      crops_154: 1713210991
+      crops_155: -473882261
+      crops_157: 1115167765
+      crops_158: 1414620140
+      crops_159: 89220535
+      crops_16: 1631468532
+      crops_160: -1584194067
+      crops_161: 1519575309
+      crops_163: -660283871
+      crops_164: -645062895
+      crops_165: -727564322
+      crops_166: 1343875139
+      crops_167: 663456142
+      crops_168: -439965550
+      crops_169: 490451407
+      crops_17: 402326003
+      crops_171: -411572310
+      crops_172: 1404664701
+      crops_173: -2096819031
+      crops_174: 345298495
+      crops_175: -339560251
+      crops_176: 957606044
+      crops_177: -268785455
+      crops_178: 1108283998
+      crops_179: 51496238
+      crops_18: -1908981015
+      crops_180: -1141874433
+      crops_181: 1950804548
+      crops_182: 1951880838
+      crops_183: 1720874683
+      crops_184: 1795449817
+      crops_185: -2067674885
+      crops_186: 1132718350
+      crops_187: -1442423031
+      crops_188: 255802703
+      crops_189: -2127571459
+      crops_19: -424253461
+      crops_190: 920351401
+      crops_191: 1764379046
+      crops_192: -282270586
+      crops_193: 1355834563
+      crops_194: 1951546729
+      crops_195: 1347562113
+      crops_196: -17331714
+      crops_197: 598213693
+      crops_198: 891848723
+      crops_199: -611220936
+      crops_2: 1232039017
+      crops_20: -1825496796
+      crops_200: 1037307541
+      crops_201: -1796129448
+      crops_202: -2055950410
+      crops_203: -799439951
+      crops_204: -210502295
+      crops_205: -214588889
+      crops_206: 875615709
+      crops_207: -1333647399
+      crops_208: 1379189839
+      crops_209: -1126787390
+      crops_21: -1648501441
+      crops_210: -239371172
+      crops_211: 836241747
+      crops_212: -183843333
+      crops_213: 1119727283
+      crops_214: 1803990594
+      crops_215: 1482986210
+      crops_216: -1606212843
+      crops_217: 1961605111
+      crops_218: 776757659
+      crops_219: -90503157
+      crops_22: -818456054
+      crops_220: -701074981
+      crops_221: -2107432761
+      crops_222: -517347875
+      crops_223: -717159974
+      crops_225: -705085766
+      crops_226: -421797888
+      crops_227: 1976518306
+      crops_228: -1445825319
+      crops_229: -1614445943
+      crops_230: -124940580
+      crops_231: 55415582
+      crops_232: -1573141076
+      crops_233: -220973589
+      crops_234: -634948224
+      crops_235: 1152126258
+      crops_236: 533803625
+      crops_237: 2042352146
+      crops_239: -2122016217
+      crops_24: 1053755425
+      crops_240: -1398315470
+      crops_241: 1546282203
+      crops_242: -647375576
+      crops_243: -1164337718
+      crops_244: 109970609
+      crops_245: -816302421
+      crops_246: -1329002860
+      crops_247: -725369281
+      crops_248: 1579562001
+      crops_249: 1153814340
+      crops_25: -169793935
+      crops_250: 656732286
+      crops_252: 1121765841
+      crops_253: -339239192
+      crops_254: 421015985
+      crops_255: 1910754810
+      crops_256: -1089080057
+      crops_257: -950734178
+      crops_258: 1397117328
+      crops_259: -2089312392
+      crops_26: -79194966
+      crops_261: -1254035669
+      crops_262: -679710833
+      crops_263: -1754475910
+      crops_264: -1594436891
+      crops_265: 710107735
+      crops_266: 342350694
+      crops_267: 1519208291
+      crops_268: 37765789
+      crops_269: 1103817772
+      crops_27: -1666321281
+      crops_270: 1356235933
+      crops_272: 1229016156
+      crops_273: -894843317
+      crops_274: -2090874885
+      crops_275: 428050164
+      crops_276: -1868729683
+      crops_277: 629543259
+      crops_278: -2006057654
+      crops_279: 1296033142
+      crops_28: -846077737
+      crops_281: -554700178
+      crops_282: 1861463870
+      crops_283: 508185259
+      crops_284: 381052113
+      crops_285: 1326478653
+      crops_286: 1793764505
+      crops_287: -135298213
+      crops_288: 1008120080
+      crops_289: 1511691762
+      crops_29: 51195963
+      crops_290: -1851891294
+      crops_291: -188673482
+      crops_292: -1006939068
+      crops_293: 403922845
+      crops_295: 2106709875
+      crops_296: 1679763208
+      crops_297: 1290635030
+      crops_298: 1024180348
+      crops_299: -1584364753
+      crops_3: -1350136114
+      crops_30: 2138642743
+      crops_300: -1094530763
+      crops_301: -2003534954
+      crops_302: 532365933
+      crops_304: 601625031
+      crops_305: -1042189335
+      crops_306: -2125174365
+      crops_307: 1678745355
+      crops_308: 972221378
+      crops_309: 261829631
+      crops_31: -378523888
+      crops_310: 528698120
+      crops_311: 1572505678
+      crops_312: -467548013
+      crops_313: -1802256145
+      crops_314: -915054888
+      crops_315: -623398015
+      crops_316: 28036618
+      crops_317: 253362517
+      crops_319: 1362822667
+      crops_32: 1217359460
+      crops_320: 904830203
+      crops_321: -1711472096
+      crops_322: 72468297
+      crops_323: 1623051447
+      crops_324: 642477981
+      crops_325: -72650422
+      crops_326: 1264930261
+      crops_328: 886109823
+      crops_329: -1671511849
+      crops_33: -1943025859
+      crops_330: -388956938
+      crops_331: 1794763694
+      crops_332: -1082588381
+      crops_333: -2051891244
+      crops_334: 1232540113
+      crops_335: 1953758624
+      crops_336: 578220525
+      crops_337: 1160307508
+      crops_338: -1975420646
+      crops_339: -180288370
+      crops_34: -299688252
+      crops_340: 1736824040
+      crops_341: 699460269
+      crops_343: -2139712013
+      crops_344: -156290903
+      crops_345: 1200546694
+      crops_346: -2094248864
+      crops_347: -849386418
+      crops_348: 1815244001
+      crops_349: -32415160
+      crops_35: -326820612
+      crops_350: -17618871
+      crops_352: -1685874414
+      crops_353: 28107139
+      crops_354: -67909605
+      crops_355: 1328372669
+      crops_356: -139477040
+      crops_357: 1444042775
+      crops_358: 2073828090
+      crops_359: 1575110080
+      crops_36: 497427572
+      crops_360: 761744633
+      crops_37: 483294670
+      crops_38: -1332463346
+      crops_39: 592202456
+      crops_4: -1517853983
+      crops_41: 281810853
+      crops_42: 345195313
+      crops_43: 2002643758
+      crops_44: 1140156999
+      crops_45: 1171056841
+      crops_47: -1394462523
+      crops_48: 1852631557
+      crops_49: -347503898
+      crops_5: 407377825
+      crops_50: -1497237699
+      crops_51: -135351309
+      crops_52: -986462122
+      crops_53: -1020999154
+      crops_55: -625420123
+      crops_56: -800623447
+      crops_57: -1564947041
+      crops_58: -915066382
+      crops_59: 1875800487
+      crops_6: -1011095049
+      crops_60: 1914631843
+      crops_61: 578204386
+      crops_62: 1146254219
+      crops_63: -1885414033
+      crops_64: 1674305823
+      crops_65: -1522479917
+      crops_66: -530109894
+      crops_67: -1286863131
+      crops_68: -1504550163
+      crops_69: -2062625796
+      crops_7: -63368076
+      crops_70: 1243621001
+      crops_71: 390401409
+      crops_72: 135390406
+      crops_74: -2045365597
+      crops_75: -1920345049
+      crops_76: -2023225973
+      crops_77: 1661818487
+      crops_78: 2046795776
+      crops_8: 534142023
+      crops_80: 1896381986
+      crops_81: -94943303
+      crops_82: -1358232567
+      crops_83: -1144795133
+      crops_84: 1176732110
+      crops_85: 1949715024
+      crops_86: -2094289996
+      crops_88: -1325569292
+      crops_89: 132784611
+      crops_90: -985647993
+      crops_91: -2038329306
+      crops_92: 1075187939
+      crops_93: 822412323
+      crops_94: -141418640
+      crops_95: 1969151994
+      crops_96: -676314428
+      crops_97: -2017156832
+      crops_98: 967822367
+      crops_99: -490866700
+      onion: 589381672
+      onion_seed: 803905722
+      onion_stage_1: 1278013672
+      onion_stage_2: -1951150755
+      onion_stage_3_1: 585656953
+      onion_stage_3_2: 1572927500
+      strawberry: -1077349395
+      strawberry_seed: 438216981
+      strawberry_stage_1: -975899889
+      strawberry_stage_2: -258381705
+      strawberry_stage_3: 1323107019
+      strawberry_stage_4: -17618871
+      watermelon: 176468452
+      watermelon_seed: 861444794
+      watermelon_stage_1: 122160879
+      watermelon_stage_2: 392473955
+      watermelon_stage_3: 328153232
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

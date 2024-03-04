@@ -22,6 +22,8 @@ public class ToolsChacterController : MonoBehaviour
 
     [SerializeField] float maxDistance = 1.5f;
 
+    [SerializeField] ToolAction onTilePickUp;
+
     Vector3Int selectedTilePosition;
 
     bool selectable;
@@ -105,11 +107,29 @@ public class ToolsChacterController : MonoBehaviour
         if (selectable)
         {
             Item item = toolBarController.GetItem;
-            if(item == null) { return; }
+            if(item == null) 
+            {
+                PickUpTile();
+                return; 
+            }
             if (item.onTileMapAction == null) { return; }
 
-            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController);
+            bool complete = item.onTileMapAction.OnApplyToTileMap(selectedTilePosition, tileMapReadController,item);
 
+            if (complete)
+            {
+                if(item.onItemUsed != null)
+                {
+                    item.onItemUsed.OnItemUsed(item, GameManagement.instance.itemContainer);
+                }
+            }
         }
+    }
+
+    private void PickUpTile()
+    {
+        if(onTilePickUp == null) { return; }
+
+        onTilePickUp.OnApplyToTileMap(selectedTilePosition, tileMapReadController, null);
     }
 }

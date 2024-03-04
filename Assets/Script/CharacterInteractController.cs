@@ -24,7 +24,7 @@ public class CharacterInteractController : MonoBehaviour
         Check();
 
         //Get mouse input to cut tree
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }

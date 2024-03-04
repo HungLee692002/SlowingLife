@@ -5,16 +5,21 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Tool Action/Seed Tile")]
 public class SeedTile : ToolAction
 {
-    public override bool OnApplyToTileMap(Vector3Int tileMapPosition, TileMapReadController tileMapReadController)
+    public override bool OnApplyToTileMap(Vector3Int tileMapPosition, TileMapReadController tileMapReadController, Item item)
     {
-        if(tileMapReadController.cropManager.CheckPlow(tileMapPosition) == false)
+        if(tileMapReadController.cropManager.CheckTileStatus(tileMapPosition,1) == false)
         {
             return false;
         }
 
 
-        tileMapReadController.cropManager.Seed(tileMapPosition);
+        tileMapReadController.cropManager.Seed(tileMapPosition,item.crop);
 
         return true ;
+    }
+
+    public override void OnItemUsed(Item usedItem, ItemContainer inventory)
+    {
+        inventory.Remove(usedItem);
     }
 }

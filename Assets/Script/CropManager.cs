@@ -1,42 +1,121 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Crops
+public class CropTile
 {
+    public bool isPlowed = false;
 
+    public bool isSeeded = false;
+
+    public bool isWatered = false;
+
+    public int growTimer;
+
+    public int growStage;
+
+    public bool complete
+    {
+        get
+        {
+            if(crop == null) { return false; }
+            return growTimer >= crop.timeToGrow;
+        }
+    }
+
+    public Crop crop;
+
+    public SpriteRenderer spriteRenderer;
+
+    internal void Harvested()
+    {
+        growTimer = 0;
+        growStage = 0;
+        crop = null;
+        spriteRenderer.gameObject.SetActive(false);
+    }
 }
 
 
-public class CropManager : MonoBehaviour
+public class CropManager : TimeAgent
 {
     [SerializeField] TileBase plowed;
 
     [SerializeField] TileBase seeded;
 
-    [SerializeField] TileBase water;
+    [SerializeField] TileBase watered;
 
     [SerializeField] Tilemap targetTileMap;
-    
-    Dictionary<Vector2Int,Crops> crops;
+
+    [SerializeField] GameObject cropSpritePrefab;
+
+    [SerializeField] ToolBarController toolBarController;
+
+    Dictionary<Vector2Int, CropTile> cropTiles;
+
 
     private void Start()
     {
         //dictionary to store which tile is plowed with key is position of that tile
-        crops = new Dictionary<Vector2Int, Crops> ();
+        cropTiles = new Dictionary<Vector2Int, CropTile>();
+
+        onTimeTick += Tick;
+        Init();
     }
 
-    public bool CheckPlow(Vector3Int position)
+    public void Tick()
     {
-        return crops.ContainsKey((Vector2Int)position);
+        foreach (CropTile cropTile in cropTiles.Values)
+        {
+            if (cropTile.crop != null)
+            {
+                if (cropTile.complete)
+                {
+                    Debug.Log("I'm done growing");
+                    continue;
+                }
+
+                cropTile.growTimer += 1;
+
+                if (cropTile.growTimer >= cropTile.crop.growStageTime[cropTile.growStage] && cropTile.isWatered )
+                {
+                    cropTile.growStage += 1;
+                    cropTile.spriteRenderer.sprite = cropTile.crop.sprites[cropTile.growStage];
+                }
+
+                
+            }
+        }
+    }
+
+    public bool CheckTileStatus(Vector3Int position, int option)
+    {
+        switch (option)
+        {
+            case 0:
+                {
+                    return cropTiles.ContainsKey((Vector2Int)position) ;
+                }
+            case 1:
+                {
+                    return cropTiles.ContainsKey((Vector2Int)position) && cropTiles[(Vector2Int)position].isSeeded == false;
+                }
+            case 2:
+                {
+                    return cropTiles.ContainsKey((Vector2Int)position) && cropTiles[(Vector2Int)position].isWatered == false;
+                }
+            default: return false;
+        }
+
     }
 
     public void Plow(Vector3Int position)
     {
         //check if is tile is plow or not
-        if(CheckPlow(position))
+        if (CheckTileStatus(position, 0))
         {
             return;
         }
@@ -45,25 +124,79 @@ public class CropManager : MonoBehaviour
         CreatePlowedTile(position);
     }
 
-    public void Seed(Vector3Int position)
-    {
-        //set tile sprite to seeded
-        targetTileMap.SetTile(position, seeded);
-    }
-
-    public void Water(Vector3Int position)
-    {
-        targetTileMap.SetTile(position, water);
-    }
-
     private void CreatePlowedTile(Vector3Int position)
     {
-        Crops crop = new Crops ();
+        CropTile crop = new CropTile();
+
+        crop.isPlowed = true;
 
         //add tile that being plow to dictionary
-        crops.Add((Vector2Int)position, crop);
+        cropTiles.Add((Vector2Int)position, crop);
+
+        
 
         //set tile sprite to plowed
         targetTileMap.SetTile(position, plowed);
+    }
+
+
+    public void WateredTile(Vector3Int position)
+    {
+        if (!CheckTileStatus(position, 2)) { return; }
+
+        cropTiles[(Vector2Int)position].isWatered = true;
+
+        //set tile sprite to watered
+        targetTileMap.SetTile(position, watered);
+
+    }
+
+    public void Seed(Vector3Int position, Crop toSeed)
+    {
+        //check if is tile is seeded or not
+        if (!CheckTileStatus(position, 1))
+        {
+            return;
+        }
+
+        //plow the tile
+        SeededTile(position, toSeed);
+    }
+
+    private void SeededTile(Vector3Int position, Crop toSeed)
+    {
+        CropTile crop = cropTiles[(Vector2Int)position];
+        crop.isSeeded = true;
+        crop.crop = toSeed;
+        crop.growStage = 0;
+        crop.growTimer = 1;
+
+        GameObject go = Instantiate(cropSpritePrefab);
+        go.transform.position = targetTileMap.CellToWorld(position);
+        go.SetActive(false);
+        crop.spriteRenderer = go.GetComponent<SpriteRenderer>();
+
+        crop.spriteRenderer.gameObject.SetActive(true);
+        crop.spriteRenderer.sprite = crop.crop.sprites[crop.growStage];
+
+    }
+
+    internal void PickUp(Vector3Int tileMapPosition)
+    {
+        Vector2Int position = (Vector2Int)tileMapPosition;
+        if (cropTiles.ContainsKey(position))
+        {
+            CropTile crop = cropTiles[position];
+
+            if(crop.complete)
+            {
+                ItemSpawnManager.instance.SpawnItem(
+                    targetTileMap.CellToWorld(tileMapPosition)
+                    ,crop.crop.yield
+                    ,crop.crop.count);
+
+                crop.Harvested();
+            }
+        }
     }
 }

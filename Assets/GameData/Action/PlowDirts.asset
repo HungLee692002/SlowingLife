@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: PlowDirts
   m_EditorClassIdentifier: 
   canPlow:
-  - {fileID: 11400000, guid: 21375f4ff0591e24895e4f7f02ebefe6, type: 2}
-  - {fileID: 11400000, guid: 2714157cccc395c42a1a008ed43d197e, type: 2}
+  - {fileID: 11400000, guid: 7804dbc055cc1774e8e50cc8cde26c39, type: 2}
