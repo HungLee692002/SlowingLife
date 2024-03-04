@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hungle-Dialogue
   m_EditorClassIdentifier: 
   line:
-  - First Line
-  - Second Line
-  - Third Line
+  - First Line aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  - Second Line bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  - Third Line ccccccccccccccccccccccccccccccccccccccccccccccccc
   actor: {fileID: 11400000, guid: f43b83cd683a3c94bad167ed1899f98d, type: 2}
