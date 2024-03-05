@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,14 @@ public class GameSceneManager : MonoBehaviour
         instance = this;
     }
 
+    [SerializeField] ScreenTint screenTint;
+
+    [SerializeField] CameraConfiner cameraConfiner;
+
     string currentScene;
+
+    AsyncOperation unload;
+    AsyncOperation load;
 
     // Start is called before the first frame update
     void Start()
@@ -20,14 +28,52 @@ public class GameSceneManager : MonoBehaviour
         currentScene = SceneManager.GetActiveScene().name;
     }
 
-    public void SwitchScene(string to,Vector3 targetPosition)
+    public void InitSwitchScene(string to, Vector3 targetPosition)
     {
+        StartCoroutine(Transition(to, targetPosition));
+    }
 
-        SceneManager.LoadScene(to, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(currentScene);
+    IEnumerator Transition(string to, Vector3 targetPosition)
+    {
+        screenTint.Tint();
+
+        yield return new WaitForSeconds(1f / screenTint.speed); //1 second divided by speed and add a small time offset
+
+        SwitchScene(to, targetPosition);
+
+        while (load != null & unload != null)
+        {
+            if (load.isDone)
+            {
+                load = null;
+            }
+            if (unload.isDone)
+            {
+                unload = null;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        cameraConfiner.UpdateBounds();
+
+        screenTint.UnTint();
+
+    }
+
+    public void SwitchScene(string to, Vector3 targetPosition)
+    {
+        load = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+        unload = SceneManager.UnloadSceneAsync(currentScene);
         currentScene = to;
         Transform playerTransform = GameManagement.instance.player.transform;
-        playerTransform.position =new Vector3(
+
+        Cinemachine.CinemachineBrain currentCamera = Camera.main.GetComponent<CinemachineBrain>();
+
+        currentCamera.ActiveVirtualCamera.OnTargetObjectWarped(
+            playerTransform,
+            targetPosition - playerTransform.position);
+
+        playerTransform.position = new Vector3(
             targetPosition.x,
             targetPosition.y,
             playerTransform.position.z);
