@@ -20,7 +20,7 @@ public class ItemPanel : MonoBehaviour
 
     private void SetIndex()
     {
-        for (int i = 0; i < itemContainer.slots.Count && i < buttonList.Count; i++)
+        for (int i = 0; i < buttonList.Count; i++)
         {
             //assign index for each slot in inventory
             buttonList[i].SetIndex(i);
@@ -32,9 +32,9 @@ public class ItemPanel : MonoBehaviour
         Show();
     }
 
-    public void Show()
+    public virtual void Show()
     {
-        for (int i = 0; i < itemContainer.slots.Count && i < buttonList.Count; i++)
+        for (int i = 0; i < buttonList.Count; i++)
         {
             //if slot is null then not display anything
             if (itemContainer.slots[i].item == null)
