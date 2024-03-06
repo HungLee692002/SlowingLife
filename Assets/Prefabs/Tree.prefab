@@ -153,6 +153,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 165efd5b49a99c14f90d4f527aea9bb0, type: 2}
   itemCountInOneDrop: 1
   resourceType: 1
+  hitCount: 0
 --- !u!114 &7097591637869238701
 MonoBehaviour:
   m_ObjectHideFlags: 0

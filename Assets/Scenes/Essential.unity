@@ -3051,7 +3051,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.24, y: -9.02, z: -10}
+  m_LocalPosition: {x: 36.94, y: -3.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6726,12 +6726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c0464f36a5cf847bf16b3ab0ce81a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plowed: {fileID: 11400000, guid: 35ae767b5275fa247ad357342a8fc249, type: 2}
-  seeded: {fileID: 11400000, guid: d596b2913bd98cb4a9c876f0d454ba4c, type: 2}
-  watered: {fileID: 11400000, guid: fca29c884c45ce24a816cc8d4373c19f, type: 2}
-  targetTileMap: {fileID: 0}
-  cropSpritePrefab: {fileID: 6158902768763954427, guid: 3cf23dfab5cbb064d9a4b0bbda6b6443, type: 3}
-  toolBarController: {fileID: 0}
+  cropsManager: {fileID: 0}
 --- !u!114 &967681595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11023,7 +11018,7 @@ Transform:
   m_GameObject: {fileID: 1724846837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.24, y: -9.02, z: 0}
+  m_LocalPosition: {x: 36.94, y: -3.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11746,7 +11741,7 @@ Transform:
   m_GameObject: {fileID: 1847093159}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.24, y: -9.02, z: -10}
+  m_LocalPosition: {x: 36.94, y: -3.95, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:

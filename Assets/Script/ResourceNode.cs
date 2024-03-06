@@ -15,7 +15,7 @@ public class ResourceNode : ToolHit
     [SerializeField] Item item;
     [SerializeField] int itemCountInOneDrop = 1;
     [SerializeField] ResourceNodeType resourceType;
-
+    [SerializeField] int hitCount = 0;
 
     public void Awake()
     {
@@ -24,18 +24,30 @@ public class ResourceNode : ToolHit
 
     public override void Hit()
     {
-        while(dropCount > 0)
+        hitCount++;
+
+        StartCoroutine(WaitAnimation());
+    }
+
+    private IEnumerator WaitAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (hitCount == 3)
         {
-            dropCount--;
+            while (dropCount > 0)
+            {
+                dropCount--;
 
-            Vector3 postion = transform.position;
-            postion.x += spread * UnityEngine.Random.value - spread / 2;
-            postion.y += spread * UnityEngine.Random.value - spread / 2;
+                Vector3 postion = transform.position;
+                postion.x += spread * UnityEngine.Random.value - spread / 2;
+                postion.y += spread * UnityEngine.Random.value - spread / 2;
 
-            ItemSpawnManager.instance.SpawnItem(postion, item,itemCountInOneDrop);
+                ItemSpawnManager.instance.SpawnItem(postion, item, itemCountInOneDrop);
+            }
+            //Destroy when player hit
+            Destroy(gameObject);
         }
-        //Destroy when player hit
-        Destroy(gameObject);
     }
 
     public override bool CanBeHit(List<ResourceNodeType> canBeHit)

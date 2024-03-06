@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70062bf05925af14ba9816520a73ad93, type: 3}
+  m_Script: {fileID: 11500000, guid: 36061deb1175b704996f76d0491aacde, type: 3}
   m_Name: Plowable
   m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 11400000, guid: 21375f4ff0591e24895e4f7f02ebefe6, type: 2}
-  - {fileID: 11400000, guid: 2714157cccc395c42a1a008ed43d197e, type: 2}
-  plowable: 1
+  canPlow:
+  - {fileID: 11400000, guid: 7804dbc055cc1774e8e50cc8cde26c39, type: 2}
