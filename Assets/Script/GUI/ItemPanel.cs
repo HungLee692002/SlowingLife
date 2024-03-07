@@ -32,8 +32,21 @@ public class ItemPanel : MonoBehaviour
         Show();
     }
 
+    private void LateUpdate()
+    {
+        if (itemContainer == null) { return; }
+
+        if (itemContainer.isChange)
+        {
+            Show();
+            itemContainer.isChange=false;
+        }
+    }
+
     public virtual void Show()
     {
+        if(itemContainer == null) { return; }
+
         for (int i = 0; i < buttonList.Count; i++)
         {
             //if slot is null then not display anything

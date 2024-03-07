@@ -9,9 +9,16 @@ public class RecipePanel : ItemPanel
 
     public override void Show()
     {
-        for(int i = 0;i<buttonList.Count && i< recipeList.craftingRecipes.Count;i++) 
+        for(int i = 0;i<buttonList.Count;i++) 
         {
-            buttonList[i].Set(recipeList.craftingRecipes[i].output);
+            if (i >= recipeList.craftingRecipes.Count)
+            {
+                buttonList[i].gameObject.SetActive(false);
+            } else
+            {
+                buttonList[i].Set(recipeList.craftingRecipes[i].output);
+
+            }
         }
     }
 

@@ -24,6 +24,8 @@ public class DialogueSystem : MonoBehaviour
 
     DialogueContainer currentDialogue;
 
+    AudioClip talkSound;
+
     int currentTextLine;
 
     private void Update()
@@ -51,6 +53,7 @@ public class DialogueSystem : MonoBehaviour
     {
         int letterCount = (int)(lineToShow.Length * visibleTextPercent);
         targetText.text = lineToShow.Substring(0, letterCount);
+        AudioManager.instance.Play(talkSound,0.3f);
     }
 
 
@@ -86,10 +89,11 @@ public class DialogueSystem : MonoBehaviour
     }
 
 
-    public void Initialize(DialogueContainer dialogueContainer)
+    public void Initialize(DialogueContainer dialogueContainer,AudioClip audio)
     {
         Show(true);
         currentDialogue = dialogueContainer;
+        talkSound = audio;
         currentTextLine = 0;
         ShowLine();
         UpdatePortrait();

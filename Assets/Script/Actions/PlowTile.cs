@@ -12,7 +12,7 @@ public class PlowTile : ToolAction
     {
         TileBase tileToPlow = tileMapReadController.GetTileBase(tileMapPosition);
 
-        if(canPlow.Contains(tileToPlow) == false)
+        if(canPlow.Contains(tileToPlow) == false || tileMapReadController.cropManager.CheckTileStatus(tileMapPosition, 0))
         {
             return false;
         }

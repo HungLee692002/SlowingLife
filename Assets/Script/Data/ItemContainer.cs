@@ -35,13 +35,14 @@ public class ItemSlot
 public class ItemContainer : ScriptableObject
 {
     public List<ItemSlot> slots;
+    public bool isChange;
 
     public void Add(Item item, int count = 1)
     {
+        isChange = true;
         //If item is stackable
         if (item.Stackable)
         {
-
             ItemSlot itemSlot = slots.Find(x => x.item == item);
             //check if there is any item in slot
             if (itemSlot != null)
@@ -74,6 +75,7 @@ public class ItemContainer : ScriptableObject
 
     public void Remove(Item itemToRemove, int count = 1)
     {
+        isChange = true;
         if (itemToRemove.Stackable)
         {
             ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);

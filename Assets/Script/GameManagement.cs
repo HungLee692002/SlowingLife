@@ -20,4 +20,6 @@ public class GameManagement : MonoBehaviour
     public DayNightSystem dayNightSystem;
 
     public DialogueSystem dialogueSystem;
+
+    public PlaceableObjectManager placeableObjectManager;
 }

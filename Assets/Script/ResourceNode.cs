@@ -26,13 +26,6 @@ public class ResourceNode : ToolHit
     {
         hitCount++;
 
-        StartCoroutine(WaitAnimation());
-    }
-
-    private IEnumerator WaitAnimation()
-    {
-        yield return new WaitForSeconds(1f);
-
         if (hitCount == 3)
         {
             while (dropCount > 0)
@@ -44,6 +37,10 @@ public class ResourceNode : ToolHit
                 postion.y += spread * UnityEngine.Random.value - spread / 2;
 
                 ItemSpawnManager.instance.SpawnItem(postion, item, itemCountInOneDrop);
+            }
+            if (resourceType == ResourceNodeType.Tree)
+            {
+
             }
             //Destroy when player hit
             Destroy(gameObject);

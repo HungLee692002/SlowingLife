@@ -75,7 +75,7 @@ public class TilemapCropsManager : TimeAgent
         crop.isPlowed = true;
 
         crop.position = position;
-        //add tile that being plow to dictionary
+        //add tile that being plow to container
         container.Add(crop);
 
         //set tile sprite to plowed
@@ -158,7 +158,8 @@ public class TilemapCropsManager : TimeAgent
         {
             case 0:
                 {
-                    return container.Get(tileMapPosition) != null;
+                    bool a = container.Get(tileMapPosition) != null;
+                    return a ;
                 }
             case 1:
                 {

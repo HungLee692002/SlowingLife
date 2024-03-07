@@ -9,6 +9,9 @@ public class TileMapReadController : MonoBehaviour
 
     public CropManager cropManager;
 
+    public PlaceableObjectReferenceManager referenceManager;
+
+
     public Vector3Int GetGridPosition(Vector2 position,bool mousePosition)
     {
         if(tilemap == null)

@@ -24,6 +24,8 @@ public class ToolsChacterController : MonoBehaviour
 
     [SerializeField] ToolAction onTilePickUp;
 
+    [SerializeField] IconHighlight iconHighlight;
+
     Vector3Int selectedTilePosition;
 
     bool selectable;
@@ -61,6 +63,7 @@ public class ToolsChacterController : MonoBehaviour
     private void Marker()
     {
         markerManager.markedCellPosition = selectedTilePosition;
+        iconHighlight.cellPosition = selectedTilePosition;
     }
 
     void CanSelectCheck()
@@ -76,6 +79,7 @@ public class ToolsChacterController : MonoBehaviour
 
         //show or hide marker depend on value above
         markerManager.Show(selectable);
+        iconHighlight.CanSelect = selectable;
     }
 
     private bool UseToolWorld()

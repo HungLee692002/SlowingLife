@@ -6,31 +6,39 @@ using UnityEngine.TextCore.Text;
 
 public class ChestInteract : Interactable
 {
-    [SerializeField] GameObject openChest;
-    [SerializeField] GameObject closeChest;
     [SerializeField] bool opened;
     [SerializeField] AudioClip openChestAudioClip;
     [SerializeField] AudioClip closeChestAudioClip;
-
+    [SerializeField] ItemContainer itemContainer;
     public override void Interact(Character character)
     {
         if (opened == false)
         {
-            opened = true;
-            openChest.SetActive(true);
-            closeChest.SetActive(false);
-
-            AudioManager.instance.Play(openChestAudioClip);
-        } else
-        {
-            opened = false;
-            openChest.SetActive(false);
-            closeChest.SetActive(true);
-
-            AudioManager.instance.Play(closeChestAudioClip);
-
+            Open(character);
         }
+        else
+        {
+            Close(character);
+        }
+
 
     }
 
+    public void Open(Character character)
+    {
+        opened = true;
+
+        AudioManager.instance.Play(openChestAudioClip);
+
+        character.GetComponent<ItemContainerInteractController>().Open(itemContainer, transform);
+    }
+
+    public void Close(Character character)
+    {
+        opened = false;
+
+        AudioManager.instance.Play(closeChestAudioClip);
+
+        character.GetComponent<ItemContainerInteractController>().Close();
+    }
 }

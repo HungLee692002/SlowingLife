@@ -6,8 +6,9 @@ public class TalkInteract : Interactable
 {
     [SerializeField] DialogueContainer dialogueContainer;
 
+    [SerializeField] AudioClip talkSound;
     public override void Interact(Character character)
     {
-        GameManagement.instance.dialogueSystem.Initialize(dialogueContainer);
+        GameManagement.instance.dialogueSystem.Initialize(dialogueContainer,talkSound);
     }
 }
