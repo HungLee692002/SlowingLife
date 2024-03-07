@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b976fb0906223554dac1cba2c75b0dff, type: 3}
   m_Name: WaterSeed
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2bb189ee08a0a2f44a7dc0d094bd7814, type: 3}
+  volume: 1

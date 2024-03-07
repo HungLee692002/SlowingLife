@@ -184,11 +184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.47
+      value: 29.409998
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.44
+      value: -18.79
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -241,11 +241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.66
+      value: 34.219997
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.98
+      value: -15.33
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54888,7 +54888,12 @@ EdgeCollider2D:
   - {x: 50.635002, y: -30.538834}
   - {x: 51.63757, y: -30.494747}
   - {x: 51.62184, y: -29.503626}
-  - {x: 54.970886, y: -29.463457}
+  - {x: 54.990536, y: -29.46501}
+  - {x: 54.97371, y: 20.042036}
+  - {x: -16.621893, y: 20.189869}
+  - {x: 55.01216, y: 20.395502}
+  - {x: 55.17309, y: 5.7210164}
+  - {x: 55.02983, y: -29.024658}
   - {x: 55.085407, y: -37.90076}
   - {x: 49.676487, y: -39.877335}
   - {x: -34.756733, y: -39.928635}
@@ -55262,8 +55267,8 @@ PolygonCollider2D:
     - - {x: 3.23205, y: 19.609438}
       - {x: -34.649117, y: 19.785969}
       - {x: -34.748302, y: 7.652336}
-      - {x: -35.13855, y: -40.087967}
-      - {x: 55.482033, y: -40.181763}
+      - {x: -34.990284, y: -39.96088}
+      - {x: 54.995968, y: -40.002686}
       - {x: 54.799282, y: 20.099216}
   m_UseDelaunayMesh: 0
 --- !u!1001 &1198626390
@@ -55280,11 +55285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.31
+      value: 38.19
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.42
+      value: -14.77
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -55595,11 +55600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.2
+      value: 32.679996
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.49
+      value: -18.84
       objectReference: {fileID: 0}
     - target: {fileID: 8892252135877572250, guid: 3146b2a95d8a0da44865349364a366bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56113,11 +56118,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189370161529313729, guid: c65ad662dccbaa44183f45439328d183, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 35.77
       objectReference: {fileID: 0}
     - target: {fileID: 189370161529313729, guid: c65ad662dccbaa44183f45439328d183, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.818
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 189370161529313729, guid: c65ad662dccbaa44183f45439328d183, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56171,6 +56176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 3369920848324121696, guid: c65ad662dccbaa44183f45439328d183, type: 3}
+      propertyPath: openChestAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d04f9615501564f469120b823db82730, type: 3}
     - target: {fileID: 6521528224993906134, guid: c65ad662dccbaa44183f45439328d183, type: 3}
       propertyPath: m_SortingLayer
       value: 0

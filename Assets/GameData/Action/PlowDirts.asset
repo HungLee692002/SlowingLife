@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36061deb1175b704996f76d0491aacde, type: 3}
   m_Name: PlowDirts
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 8d96db5d1a7542b4aae1f17ebecda8bc, type: 3}
+  volume: 0.25
   canPlow:
   - {fileID: 11400000, guid: 7804dbc055cc1774e8e50cc8cde26c39, type: 2}

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ToolAction : ScriptableObject
 {
+    public AudioClip audioClip;
+
+    [Range(0f, 1f)]
+    public float volume =1f;
+
     public virtual bool OnApply(Vector2 worldPoint)
     {
         Debug.LogWarning("OnApply is not implemented");
@@ -20,4 +25,5 @@ public class ToolAction : ScriptableObject
     {
 
     }
+
 }

@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2934cb80466443143ae5dc0c409e7f74, type: 3}
   m_Name: HarvestCrop
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  volume: 1

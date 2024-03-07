@@ -14,6 +14,8 @@ public class WaterTile : ToolAction
 
         tileMapReadController.cropManager.WateredTile(tileMapPosition);
 
+        AudioManager.instance.Play(audioClip,volume);
+
         return true;
     }
 }

@@ -27,9 +27,6 @@ public class Transition : MonoBehaviour
 
     internal void InitiateTransistion(Transform toTransistion)
     {
-        
-
-
 
         switch (transitionType)
         {

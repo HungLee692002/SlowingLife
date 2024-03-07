@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702d6507165103949b98a819fa511199, type: 3}
   m_Name: CutTrees
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2c6a65616373e794b9f187b481c0e671, type: 3}
+  volume: 1
   sizeOfInteractableArea: 1
   canHitNodesOfType: 01000000

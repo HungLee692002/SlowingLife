@@ -30,7 +30,7 @@ public class DialogueSystem : MonoBehaviour
     {
         if(gameObject.activeInHierarchy)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E))
             {
                 PushText();
             }
@@ -108,7 +108,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void Conclude()
     {
-        Debug.Log("Error");
+        Debug.Log("Nothing to talk anymore");
         Show(false);
     }
 }

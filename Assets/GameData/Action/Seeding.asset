@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4298c55608fb0439f2b3206e50b50a, type: 3}
   m_Name: Seeding
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 8d96db5d1a7542b4aae1f17ebecda8bc, type: 3}
+  volume: 0.25

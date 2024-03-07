@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702d6507165103949b98a819fa511199, type: 3}
   m_Name: MineOres
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 3adb607156436ef4288a2d1526d6df31, type: 3}
+  volume: 1
   sizeOfInteractableArea: 1
   canHitNodesOfType: 02000000

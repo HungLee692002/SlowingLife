@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   crops:
   - isPlowed: 1
-    isSeeded: 0
-    isWatered: 0
-    growTimer: 0
-    growStage: 0
-    position: {x: 37, y: -5, z: 0}
-    crop: {fileID: 0}
+    isSeeded: 1
+    isWatered: 1
+    growTimer: 4
+    growStage: 3
+    position: {x: 38, y: -5, z: 0}
+    crop: {fileID: 11400000, guid: 56ecaa948fee84d4e8ce317a9dc22aeb, type: 2}
     spriteRenderer: {fileID: 0}
   - isPlowed: 1
-    isSeeded: 0
-    isWatered: 0
-    growTimer: 0
-    growStage: 0
-    position: {x: 38, y: -5, z: 0}
-    crop: {fileID: 0}
+    isSeeded: 1
+    isWatered: 1
+    growTimer: 4
+    growStage: 3
+    position: {x: 38, y: -6, z: 0}
+    crop: {fileID: 11400000, guid: 56ecaa948fee84d4e8ce317a9dc22aeb, type: 2}
     spriteRenderer: {fileID: 0}

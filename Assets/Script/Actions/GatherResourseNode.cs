@@ -29,6 +29,9 @@ public class GatherResourseNode : ToolAction
                 if (hit.CanBeHit(canHitNodesOfType))
                 {
                     hit.Hit();
+
+                    AudioManager.instance.Play(audioClip);
+
                     return true;
                 }
                 

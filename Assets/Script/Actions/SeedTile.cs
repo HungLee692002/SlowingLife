@@ -12,8 +12,9 @@ public class SeedTile : ToolAction
             return false;
         }
 
-
         tileMapReadController.cropManager.Seed(tileMapPosition,item.crop);
+
+        AudioManager.instance.Play(audioClip);
 
         return true ;
     }

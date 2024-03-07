@@ -46,6 +46,7 @@ public class GameSceneManager : MonoBehaviour
             if (load.isDone)
             {
                 load = null;
+
             }
             if (unload.isDone)
             {
@@ -64,7 +65,9 @@ public class GameSceneManager : MonoBehaviour
     {
         load = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
         unload = SceneManager.UnloadSceneAsync(currentScene);
+
         currentScene = to;
+
         Transform playerTransform = GameManagement.instance.player.transform;
 
         Cinemachine.CinemachineBrain currentCamera = Camera.main.GetComponent<CinemachineBrain>();

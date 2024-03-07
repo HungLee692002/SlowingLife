@@ -19,6 +19,8 @@ public class PlowTile : ToolAction
 
         tileMapReadController.cropManager.Plow(tileMapPosition);
 
+        AudioManager.instance.Play(audioClip,volume);
+
         return true;
     }
 }
