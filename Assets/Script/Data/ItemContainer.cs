@@ -82,18 +82,19 @@ public class ItemContainer : ScriptableObject
             if (itemSlot == null) { return; }
 
             itemSlot.count -= count;
-            if(itemSlot.count <= 0)
+            if (itemSlot.count <= 0)
             {
                 itemSlot.Clear();
             }
-        } else
+        }
+        else
         {
-            while(count > 0)
+            while (count > 0)
             {
-                count -=1;
+                count -= 1;
 
                 ItemSlot itemSlot = slots.Find(x => x.item == itemToRemove);
-                if(itemSlot == null) { break; }
+                if (itemSlot == null) { break; }
 
                 itemSlot.Clear();
 
@@ -103,7 +104,7 @@ public class ItemContainer : ScriptableObject
 
     internal bool CheckFreeSpace()
     {
-        for(int i = 0;i < slots.Count;i++)
+        for (int i = 0; i < slots.Count; i++)
         {
             if (slots[i].item == null)
             {
@@ -118,12 +119,21 @@ public class ItemContainer : ScriptableObject
     {
         ItemSlot item = slots.Find(x => x.item == checkingItem.item);
 
-        if(item == null) { return false; }
+        if (item == null) { return false; }
 
-        if(checkingItem.item.Stackable)
+        if (checkingItem.item.Stackable)
         {
             return item.count > checkingItem.count;
         }
         return true;
+    }
+
+    internal void Init()
+    {
+        slots = new List<ItemSlot>();
+        for (int i = 0; i < 36; i++)
+        {
+            slots.Add(new ItemSlot());
+        }
     }
 }

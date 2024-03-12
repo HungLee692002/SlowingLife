@@ -57,7 +57,13 @@ public class ItemPanel : MonoBehaviour
             //if not display item in that slot
             else
             {
-                buttonList[i].Set(itemContainer.slots[i]);
+                if(itemContainer.slots[i].item.Stackable && itemContainer.slots[i].count == 0)
+                {
+                    buttonList[i].Clean();
+                } else
+                {
+                    buttonList[i].Set(itemContainer.slots[i]);
+                }
             }
         }
     }

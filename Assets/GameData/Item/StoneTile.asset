@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb2f16380c00c143a710229a9e830f2, type: 3}
   m_Name: StoneTile
   m_EditorClassIdentifier: 
+  id: 5
   Name: StoneTile
   Stackable: 1
   Icon: {fileID: 1482929774, guid: 9e0663d53e1353844952e4a0189ccef5, type: 3}
@@ -19,3 +20,5 @@ MonoBehaviour:
   onTileMapAction: {fileID: 0}
   onItemUsed: {fileID: 0}
   crop: {fileID: 0}
+  iconHighlight: 0
+  itemPrefab: {fileID: 0}

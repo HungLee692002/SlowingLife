@@ -7,7 +7,7 @@ using static UnityEditor.Progress;
 
 public class PlaceableObjectManager : MonoBehaviour
 {
-    [SerializeField] PlaceableObjectContainer objectContainer;
+    public PlaceableObjectContainer objectContainer;
 
     [SerializeField] Tilemap targetTilemap;
 
@@ -25,6 +25,7 @@ public class PlaceableObjectManager : MonoBehaviour
         Vector3 position = targetTilemap.CellToWorld(positionOnGrid);
 
         go.transform.position = position;
+
 
         objectContainer.placeableObjects.Add(new PlaceableObject(item, go.transform, positionOnGrid));
 
@@ -50,9 +51,31 @@ public class PlaceableObjectManager : MonoBehaviour
                 Vector3 position = targetTilemap.CellToWorld(p.positionOnGrid);
 
                 go.transform.position = position;
+
+                p.targetObject = go.transform;
+
+                IPersistant persistant = go.GetComponent<IPersistant>();
+                if(persistant != null)
+                {
+                    persistant.Load(p.objectState);
+                }
             }
         }
-
-        
     }
+
+    private void Update()
+    {
+        for(int i = 0;i < objectContainer.placeableObjects.Count; i++)
+        {
+            IPersistant persistant = objectContainer.placeableObjects[i].targetObject.GetComponent<IPersistant>();
+
+            if (persistant != null)
+            {
+                string jsonString = persistant.Read();
+                objectContainer.placeableObjects[i].objectState = jsonString;
+            }
+        }
+    }
+
+
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb2f16380c00c143a710229a9e830f2, type: 3}
   m_Name: Cabbage
   m_EditorClassIdentifier: 
+  id: 2
   Name: Cabbage
   Stackable: 1
   Icon: {fileID: 761744633, guid: 39aac499df37bfe48a6e4e48fc1215c2, type: 3}

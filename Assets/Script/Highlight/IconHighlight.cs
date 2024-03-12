@@ -46,7 +46,18 @@ public class IconHighlight : MonoBehaviour
     {
         if (targetTilemap == null) { return; }
         targetPosition = targetTilemap.CellToWorld(cellPosition);
-        transform.position = targetPosition + targetTilemap.cellSize / 2;
+
+        Vector2 pivot = spriteRenderer.sprite.pivot;
+
+        if(pivot.x == 0f && pivot.y == 0f)
+        {
+            transform.position = targetPosition;
+
+        } else
+        {
+            transform.position = targetPosition + targetTilemap.cellSize / 2;
+        }
+
     }
 
     internal void Set(Sprite icon)

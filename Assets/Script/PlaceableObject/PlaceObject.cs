@@ -7,6 +7,7 @@ public class PlaceObject : ToolAction
 {
     public override bool OnApplyToTileMap(Vector3Int tileMapPosition, TileMapReadController tileMapReadController, Item item)
     {
+        if (!tileMapReadController.referenceManager.check(tileMapPosition)) { return false; }
 
         tileMapReadController.referenceManager.Place(item, tileMapPosition);
 

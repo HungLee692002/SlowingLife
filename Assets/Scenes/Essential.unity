@@ -2983,7 +2983,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!4 &377914648
 Transform:
   m_ObjectHideFlags: 0
@@ -8616,6 +8616,7 @@ MonoBehaviour:
   dayNightSystem: {fileID: 967681590}
   dialogueSystem: {fileID: 2083021883}
   placeableObjectManager: {fileID: 0}
+  itemDB: {fileID: 11400000, guid: 97e0aae84cb625d458fdaf2370a0bbab, type: 2}
 --- !u!4 &967681588
 Transform:
   m_ObjectHideFlags: 0

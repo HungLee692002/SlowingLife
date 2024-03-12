@@ -22,4 +22,6 @@ public class GameManagement : MonoBehaviour
     public DialogueSystem dialogueSystem;
 
     public PlaceableObjectManager placeableObjectManager;
+
+    public ItemList itemDB;
 }

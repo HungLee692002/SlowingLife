@@ -37,12 +37,13 @@ public class ToolBarController : MonoBehaviour
         float delta = Input.mouseScrollDelta.y * -1;
         if (delta != 0)
         {
-            if(delta > 0)
+            if (delta > 0)
             {
                 selectedTool += 1;
 
                 selectedTool = (selectedTool >= toolBarSize ? 0 : selectedTool);
-            } else
+            }
+            else
             {
                 selectedTool -= 1;
 
@@ -57,16 +58,25 @@ public class ToolBarController : MonoBehaviour
 
     public void UpdateHighlightIcon(int id = 1)
     {
-        Item item = GetItem;
-
-        if(item == null) { 
-            iconHighlight.Show = false;
-            return; }
-
-        iconHighlight.Show = item.iconHighlight;
-        if (item.iconHighlight)
+        try
         {
-            iconHighlight.Set(item.Icon);
+            Item item = GetItem;
+
+            if (item == null)
+            {
+                iconHighlight.Show = false;
+                return;
+            }
+
+            iconHighlight.Show = item.iconHighlight;
+            if (item.iconHighlight)
+            {
+                iconHighlight.Set(item.Icon);
+            }
+        } catch (Exception e)
+        {
+            return;
         }
+        
     }
 }
