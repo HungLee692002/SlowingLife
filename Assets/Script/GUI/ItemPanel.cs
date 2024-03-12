@@ -32,7 +32,7 @@ public class ItemPanel : MonoBehaviour
         Show();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (itemContainer == null) { return; }
 

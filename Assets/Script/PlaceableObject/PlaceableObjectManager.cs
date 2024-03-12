@@ -22,7 +22,7 @@ public class PlaceableObjectManager : MonoBehaviour
 
         GameObject go = Instantiate(item.itemPrefab);
 
-        Vector3 position = targetTilemap.CellToWorld(positionOnGrid) + targetTilemap.cellSize / 2;
+        Vector3 position = targetTilemap.CellToWorld(positionOnGrid);
 
         go.transform.position = position;
 
@@ -47,7 +47,7 @@ public class PlaceableObjectManager : MonoBehaviour
             {
                 GameObject go = Instantiate(p.placedItem.itemPrefab);
 
-                Vector3 position = targetTilemap.CellToWorld(p.positionOnGrid) + targetTilemap.cellSize / 2;
+                Vector3 position = targetTilemap.CellToWorld(p.positionOnGrid);
 
                 go.transform.position = position;
             }

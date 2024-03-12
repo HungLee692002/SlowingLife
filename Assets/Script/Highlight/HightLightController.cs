@@ -15,7 +15,8 @@ public class HightLightController : MonoBehaviour
         }
 
         Vector3 position = target.transform.position;
-        position.y += 1;
+        position.y += 2;
+        position.x += 0.5f;
         HighLight(position);
     }
 

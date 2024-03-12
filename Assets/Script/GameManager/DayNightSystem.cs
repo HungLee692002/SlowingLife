@@ -8,7 +8,7 @@ public class DayNightSystem : MonoBehaviour
 {
     public float duration = 8640f;
 
-    public float phaseLenght = 90f;
+    public float phaseLenght = 10f;
 
     int currentPhase = 0;
 
@@ -70,7 +70,8 @@ public class DayNightSystem : MonoBehaviour
     private void TimeAgents()
     {
         int phase = (int)(time / phaseLenght);
-
+        Debug.Log(time + " - " + phaseLenght);
+        Debug.Log(currentPhase + " - " + phase);
         if (currentPhase != phase)
         {
             currentPhase = phase;
@@ -116,6 +117,6 @@ public class DayNightSystem : MonoBehaviour
             currentYear++;
             currentMonth = 1;
         }
-        Debug.Log("Time: " + string.Format("{0:D2}:{1:D2}", hours, minutes));
+        //Debug.Log("Time: " + string.Format("{0:D2}:{1:D2}", hours, minutes));
     }
 }
